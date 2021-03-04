@@ -5,11 +5,12 @@ class UserModel {
   constructor() {
     this.Schema = mongoose.Schema;
     this.UserSchema = new this.Schema({
-      foto:String,
-      nombre:String,
-      email: {
-        type: String,
+      foto: { 
+        data: Buffer, 
+        contentType: String 
       },
+      nombre: String,
+      email: String,
       password: String,
     });
     if (modelenum["users"] == null) {
